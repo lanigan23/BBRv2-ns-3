@@ -160,6 +160,7 @@ def build(bld):
         'model/tcp-illinois.cc',
         'model/tcp-htcp.cc',
         'model/tcp-lp.cc',
+        'model/tcp-bbr.cc',
         'model/tcp-rx-buffer.cc',
         'model/tcp-tx-buffer.cc',
         'model/tcp-tx-item.cc',
@@ -402,6 +403,7 @@ def build(bld):
         'model/tcp-illinois.h',
         'model/tcp-htcp.h',
         'model/tcp-lp.h',
+        'model/tcp-bbr.h',
         'model/tcp-ledbat.h',
         'model/tcp-socket-base.h',
         'model/tcp-socket-state.h',
@@ -421,6 +423,7 @@ def build(bld):
         'model/rip.h',
         'model/rip-header.h',
         'helper/rip-helper.h',
+        'model/windowed-filter.h'
        ]
 
     if bld.env['NSC_ENABLED']:
