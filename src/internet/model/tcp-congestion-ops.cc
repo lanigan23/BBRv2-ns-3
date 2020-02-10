@@ -65,7 +65,7 @@ void
 TcpCongestionOps::CongestionStateSet (Ptr<TcpSocketState> tcb,
                                       const TcpSocketState::TcpCongState_t newState)
 {
-  NS_LOG_FUNCTION (this << tcb << newState);
+  NS_LOG_FUNCTION (this << tcb << newState); 
 }
 
 void

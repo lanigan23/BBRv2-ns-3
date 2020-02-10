@@ -600,6 +600,7 @@ TcpBbr::PktsAcked (Ptr<TcpSocketState> tcb, uint32_t segmentsAcked,
                         const Time& rtt)
 {
   NS_LOG_FUNCTION (this << tcb << segmentsAcked << rtt);
+  CongControl (tcb, tcb->m_rc, tcb->m_rs);
 }
 
 void

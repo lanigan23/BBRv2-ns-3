@@ -216,7 +216,7 @@ int main (int argc, char *argv[])
   if (size != 0)
     {
       size *= (std::min (access_b, bottle_b).GetBitRate () / 8) * ((access_d + bottle_d) * 2).GetSeconds ();
-      Config::SetDefault ("ns3::PfifoFastQueueDisc::Limit", UintegerValue (size / mtu_bytes));
+      Config::SetDefault ("ns3::PfifoFastQueueDisc::MaxSize", UintegerValue (size / mtu_bytes));
     }
 
 

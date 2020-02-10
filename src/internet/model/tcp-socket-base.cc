@@ -1735,7 +1735,9 @@ TcpSocketBase::ReceivedAck (Ptr<Packet> packet, const TcpHeader& tcpHeader)
             previousLost - currentLost;
       auto rateSample = m_rateOps->GenerateSample (currentDelivered, lost,
                                               false, priorInFlight, m_tcb->m_minRtt);
+      m_tcb->m_rs = rateSample;
       auto rateConn = m_rateOps->GetConnectionRate ();
+      m_tcb->m_rc;
       m_congestionControl->CongControl(m_tcb, rateConn, rateSample);
     }
 

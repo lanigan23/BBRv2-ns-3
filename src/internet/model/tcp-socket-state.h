@@ -21,6 +21,7 @@
 #include "ns3/data-rate.h"
 #include "ns3/traced-value.h"
 #include "ns3/sequence-number.h"
+#include "ns3/tcp-rate-ops.h"
 
 namespace ns3 {
 
@@ -153,6 +154,9 @@ public:
 
   TracedValue<uint32_t>  m_bytesInFlight {0};        //!< Bytes in flight
   TracedValue<Time>      m_lastRtt {Seconds (0.0)};  //!< Last RTT sample collected
+
+  TcpRateOps::TcpRateSample m_rs;
+  TcpRateOps::TcpRateConnection m_rc;
 
   /**
    * \brief Get cwnd in segments rather than bytes
